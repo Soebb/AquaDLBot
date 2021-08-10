@@ -40,15 +40,12 @@ def progress(current, total):
 
 thumbpic= f"/thumbnail/aquadl.jpg"
 
-@nezuko.on_message(filters.command(["dl"]))
+@nezuko.on_message(filters.text)
 async def download (client , message):
-    await message.reply_text(text = f"**Got link.. Downloading 🥺")
-    url = message.reply_to_message.text
-    disable_web_page_preview = True
+    url = message.text
     filename = wget.download(url)  
     chat_id = message.chat.id
-    await nezuko.send_document(chat_id ,filename , caption="uploaded with ❤️ by @AquaDLBot" , progress=progress , thumb=thumbpic)
-    await message.reply_text(text = f"**Uploaded Successfully! 🥺")
+    await nezuko.send_document(chat_id ,filename , caption="uploaded with ❤️ by @AquaDLBot")
     os.remove(filename)
     
 
