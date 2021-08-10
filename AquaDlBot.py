@@ -13,9 +13,9 @@ API_HASH = os.getenv("API_HASH")
 
 nezuko = Client(
     "my_bot",
-    bot_token="BOT_TOKEN",
-    api_id="API_ID",
-    api_hash="API_HASH"
+    bot_token="1946110292:AAFHwVYGCDjsb7J0pSxwe_oM-ob6otWhVE8",
+    api_id=2421254,
+    api_hash="bc8ee680fd4f2720d3a24e43831c90b1"
     
 )
 
